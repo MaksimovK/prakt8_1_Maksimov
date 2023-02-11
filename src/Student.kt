@@ -26,12 +26,16 @@ class Student(_name: String)
     fun DateKourse(_family: String, _name: String)
     {
         try {
+            var data1 : Int
+            var data2 : Int
+            do {
             print("Введите год послупления: ")
-            val data1 = readLine()!!.toInt()
+             data1 = readLine()!!.toInt()
             print("Введите сегоднешний год: ")
-            val data2 = readLine()!!.toInt()
-            val deltadate = data2 - data1
-            println("$_family $_name, вы сейчас на $deltadate курсе")
+             data2 = readLine()!!.toInt()
+            }while(data1 > data2)
+
+            println("$_family $_name, вы сейчас на ${data2-data1} курсе")
         }
         catch (ex: Exception)
         {
